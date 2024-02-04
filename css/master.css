@@ -1,0 +1,397 @@
+:root {
+  --main-color: #FF9800;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Open Sans', sans-serif;
+}
+
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+.main-title {
+  font-weight: bold;
+  font-size: 33px;
+  color: var(--main-color);
+}
+
+/* let-menu */
+.setting-menu {
+  position: fixed;
+  height: 100%;
+  width: 230px;
+  background-color: white;
+  top: 0;
+  left: -230px;
+  z-index: 1000;
+  transition: 0.5s;
+}
+
+.setting-menu.open {
+  left: 0;
+}
+
+.setting-menu .icon {
+  position: relative;
+  top: 100px;
+  left: 205px;
+  padding: 8px 0;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 50%;
+  z-index: -1;
+}
+
+.setting-menu .fas {
+  padding: 8px 0px;
+  width: 30px;
+  height: 30px;
+  margin-left: 18px;
+
+}
+
+
+.setting-menu .option-box {
+  padding: 8px 10px;
+  background-color: #eee;
+  text-align: center;
+}
+
+.setting-menu .option-box .colors-list li {
+  width: 20px;
+  height: 20px;
+  display: inline-block;
+  border-radius: 50%;
+  cursor: pointer;
+  margin-left: 5px;
+}
+
+.setting-menu .option-box .colors-list li.active {
+  outline: 2px solid #777;
+}
+
+.setting-menu .option-box .colors-list li:nth-child(1) {
+  background-color: #FF9800;
+}
+
+.setting-menu .option-box .colors-list li:nth-child(2) {
+  background-color: #E91E63;
+}
+
+.setting-menu .option-box .colors-list li:nth-child(3) {
+  background-color: #009688;
+}
+
+.setting-menu .option-box .colors-list li:nth-child(4) {
+  background-color: #03A9F4;
+}
+
+.setting-menu .option-box .colors-list li:nth-child(5) {
+  background-color: #4CAF50;
+}
+
+.setting-menu .Random-list .btn {
+  background-color: var(--main-color);
+  opacity: 0.5;
+  color: white;
+
+}
+
+.setting-menu .Random-list .btn:focus {
+  box-shadow: none;
+}
+
+.setting-menu .Random-list .btn.active {
+  opacity: 1;
+}
+
+/* let-menu */
+/* start landing */
+.landing {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(../imgs/01.jpg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+  z-index: 2;
+}
+
+.landing::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.426);
+  z-index: -2;
+}
+
+.navbar {
+  background-color: rgba(0, 0, 0, 0.314);
+}
+
+.navbar .navbar-brand {
+  color: var(--main-color) !important;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.navbar-toggler-icon {}
+
+
+.navbar .nav-item .nav-link {
+  color: white !important;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar .nav-item .nav-link.active,
+.navbar .nav-item .nav-link:hover {
+  color: var(--main-color) !important;
+}
+
+.landing .inf-landing {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.landing .inf-landing h3 {
+  font-size: 35px;
+  font-weight: bold;
+  margin-bottom: 12px;
+}
+
+.landing .inf-landing .sp {
+  color: var(--main-color);
+}
+
+.landing .inf-landing p {
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+/* end landing */
+/* start about */
+.about p {
+  color: #555;
+  font-size: 18px;
+  line-height: 1.8;
+}
+
+.about img {
+  width: 300px;
+}
+
+/* end about */
+/* star skills */
+.skills {
+  background-color: #eee;
+}
+
+
+
+.skills .prog {
+  height: 30px;
+  width: calc(100% - 150px);
+  background-color: #f6f6f6;
+  position: relative;
+}
+
+@media(max-width:767px) {
+  .skills .prog {
+    width: 100%;
+  }
+}
+
+.skills .box-progress .prog span {
+  height: 100%;
+  background-color: var(--main-color);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: linear 0.5s;
+  line-height: 1.6;
+  color: white;
+}
+
+/* end skills */
+/* gallery */
+.gallery .imgs img {
+  padding: 3px;
+  background-color: white;
+  border: 3px solid #ddd;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: #555;
+  opacity: 0.5;
+}
+
+.popup_Box {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 3px solid #ddd;
+
+  padding: 20px;
+  z-index: 10;
+}
+
+.popup_Box img {
+  width: 100%;
+
+}
+
+.popup_Box h3 {
+  color: var(--main-color);
+  font-weight: bold;
+  text-align: center;
+}
+
+.popup_Box .buttonClose {
+  position: absolute;
+  top: -14px;
+  right: -14px;
+  background-color: var(--main-color);
+  width: 40px;
+  height: 40px;
+  line-height: 33px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 25px;
+  color: white;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* gallery */
+/* timeline */
+.timeline {
+  background-color: #ddd;
+}
+
+.timeline .year {
+  width: 50px;
+  margin: 20px auto;
+  background-color: var(--main-color);
+  color: white;
+  text-align: center;
+  padding: 2px;
+  border-radius: 6px;
+  position: relative;
+  z-index: 2;
+  font-weight: bold;
+}
+
+.timeline .timeline-content {
+  position: relative;
+  overflow: hidden;
+}
+
+.timeline .timeline-content::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 2px;
+  margin-left: -1px;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
+.timeline .timeline-content .left,
+.timeline .timeline-content .right {
+  background-color: white;
+  padding: 15px;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.timeline .timeline-content .left::before,
+.timeline .timeline-content .right::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: white;
+  border: 3px solid var(--main-color);
+  /* z-index: 3; */
+}
+
+.timeline .timeline-content .left::before {
+  top: 20px;
+  right: -22%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.timeline .timeline-content .right::before {
+  top: 25px;
+  left: -22.3%;
+  /* transform: translate(-50%, -50%); */
+}
+
+.timeline .timeline-content .content {
+  position: relative;
+}
+
+.timeline .timeline-content .left .content::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent transparent white;
+  right: -34.5px;
+  top: 10px;
+}
+
+.timeline .timeline-content .right .content::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent white transparent transparent;
+  left: -35px;
+  top: 12px;
+}
+
+@media(max-width:991px) {
+
+  .timeline .timeline-content .left .content::after,
+  .timeline .timeline-content .right .content::after {
+    display: none;
+  }
+
+}
+
+/* timeline */
